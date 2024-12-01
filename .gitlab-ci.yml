@@ -3,10 +3,10 @@ stages:
  
 
 unit_testing:
-  -tags:
+  - image: node:16-alpine
+  - tags:
     -local
     -vm
-  - image: node:16-alpine
   - stage: test
   - script:
     - echo "test using node image done"
