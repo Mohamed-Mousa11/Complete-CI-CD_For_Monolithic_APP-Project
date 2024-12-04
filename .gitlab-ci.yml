@@ -23,6 +23,9 @@ unit_testing:
     - npm run test
 
 image_build_push:
+  tags:
+		- local
+		- vm
   image: docker:dind
   stage: build
   script:
