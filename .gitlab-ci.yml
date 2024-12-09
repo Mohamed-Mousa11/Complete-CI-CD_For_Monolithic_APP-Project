@@ -12,9 +12,6 @@ stages:
  
 
 unit_testing:
-  tags:
-	  - local
-		- vm
   image: node:16-alpine
   stage: test
   cache:
@@ -26,9 +23,6 @@ unit_testing:
     - npm run test
 
 image_build_push:
-  tags:
-	  - local
-		- vm
   image: docker:dind
   stage: build
   script:
