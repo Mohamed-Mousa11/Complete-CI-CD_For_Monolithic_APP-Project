@@ -38,5 +38,10 @@ image_build_push:
       dotenv: environmental_variables.env
 
 
+container_deploying:
+  script:
+    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY $LOGIN_TO_VM_CREDS
+
+
 
 
