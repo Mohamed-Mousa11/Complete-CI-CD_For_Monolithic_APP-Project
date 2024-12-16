@@ -20,7 +20,7 @@ stages:
     - npm install
     - npm run test
 
-.image_build_push:
+image_build_push:
   image: docker:27.4.0-rc.2-cli
   services:
     - docker:27.4.0-rc.2-dind
