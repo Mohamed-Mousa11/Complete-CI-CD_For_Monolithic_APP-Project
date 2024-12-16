@@ -1,7 +1,0 @@
-deploy-s3:
-  image:
-    name: amazon/aws-cli
-    entrypoint: [""]
-  script:
-    - aws --version
-    - aws s3 cp logs/* s3://mybucketpractise1000
