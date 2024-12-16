@@ -39,8 +39,11 @@ image_build_push:
 
 
 container_deploying:
+  image: docker:dind
   script:
-    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY $LOGIN_TO_VM_CREDS
+    - ssh -o StrictHostKeyChecking=no -i $SSH_KEY ec2-user@$EC2_LOGIN "
+        docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+        touch testssh.txt"
 
 
 
