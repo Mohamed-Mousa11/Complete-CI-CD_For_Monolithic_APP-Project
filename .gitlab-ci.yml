@@ -7,6 +7,7 @@ workflow:
 stages:
   - test
   - build
+  - deploy
 
 unit_testing:
   image: node:16-alpine
@@ -40,6 +41,7 @@ image_build_push:
 
 container_deploying:
   image: docker:dind
+  stage: deploy
   script:
     - ssh -o StrictHostKeyChecking=no -i $SSH_KEY ec2-user@$EC2_LOGIN "
         docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
