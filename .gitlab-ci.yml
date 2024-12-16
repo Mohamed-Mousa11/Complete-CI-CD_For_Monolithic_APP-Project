@@ -14,7 +14,7 @@ stages:
   - build
   - deploy
 
-.unit_testing:
+unit_testing:
   image: node:16-alpine
   stage: test
   cache:
