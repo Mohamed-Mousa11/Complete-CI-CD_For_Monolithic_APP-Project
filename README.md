@@ -69,7 +69,9 @@ To set up this pipeline, ensure the following:
 
 ### AWS EC2 Instance Setup
 - An AWS EC2 instance is required for hosting the application.  
-- The instance should have Docker installed and configured to run containers.  
+- The instance should have Docker installed and configured to run containers.
+   ![install docker on ec2](https://github.com/user-attachments/assets/99f4bf27-fde5-4659-be8a-40bca0297793)
+  
 - The necessary permissions must be assigned to the EC2 instance, allowing it to pull artifacts or images required for deployment.
 
 ### GitLab Project Configuration
@@ -103,6 +105,7 @@ The pipeline consists of the following stages, each playing a crucial role in th
 - The deploy stage pushes the application to the EC2 instance.  
 - It involves pulling the latest version of the application artifact and replacing the running instance with the updated version.  
 - This stage can include health checks to verify the success of the deployment.
+![piplinedone](https://github.com/user-attachments/assets/bd6a9eea-9e93-40c3-8e2f-154ceae5e515)
 
 ---
 
@@ -163,13 +166,11 @@ The pipeline consists of the following stages, each playing a crucial role in th
 
 ---
 
-## Future Enhancements
+![app deployed](https://github.com/user-attachments/assets/2465c588-a6d3-46fd-b275-842661b135bc)
 
-- **Implement Blue-Green Deployment:**  
-  Introduce parallel environments to reduce downtime during updates.
+![app working last](https://github.com/user-attachments/assets/37e36a9e-64d4-4e13-aa86-3b6bc26c6bc7)
 
-- **Add Security Scanning:**  
-  Integrate tools for static application security testing (SAST) and dynamic application security testing (DAST).
+
 
 - **Enable Multi-Region Deployment:**  
   Scale the deployment to multiple regions for better availability and performance.
