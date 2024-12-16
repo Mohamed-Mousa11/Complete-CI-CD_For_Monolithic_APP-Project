@@ -172,8 +172,3 @@ The pipeline consists of the following stages, each playing a crucial role in th
 
 
 
-- **Enable Multi-Region Deployment:**  
-  Scale the deployment to multiple regions for better availability and performance.
-
----
-
