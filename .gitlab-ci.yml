@@ -60,6 +60,9 @@ container_deploying:
         docker-compose -f docker-compose.yaml up -d"
   variables:
         HOST_PORT: $APP_PORT_IN_URL
+  environment:
+        name: production
+        url: http://$EC2_LOGIN:$HOST_PORT
 
 
 
